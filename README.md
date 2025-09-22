@@ -1,4 +1,3 @@
-# Demo with animation
+# CouncilX
 
-https://github.com/user-attachments/assets/70d7eeb9-5ef8-4682-8a81-96f2057dfb7c
-
+A simple, professional website for CouncilX, a security council for your architecture.
