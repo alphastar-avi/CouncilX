@@ -27,7 +27,6 @@ h1 {
     font-size: 10vw;
     margin: 0;
     font-weight: 600;
-    animation: glow 5s ease-in-out infinite;
 }
 
 h2 {
@@ -71,44 +70,7 @@ h4 {
     color: #aaa;
 }
 
-/* Animation styles */
-h1 span, h3 span {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s, transform 0.5s;
-}
 
-[data-animation="fade-in"].is-visible h1 span, 
-[data-animation="fade-in"].is-visible h3 span {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-[data-animation] {
-    opacity: 0;
-    transition: opacity 1s, transform 1s;
-}
-
-[data-animation="fade-in"] {
-    transform: translateY(20px);
-}
-
-[data-animation="fade-in"].is-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-@keyframes glow {
-    0% {
-        text-shadow: 0 0 15px 2px rgba(255, 255, 255, 0.3);
-    }
-    50% {
-        text-shadow: 0 0 40px 5px rgba(255, 255, 255, 0.8);
-    }
-    100% {
-        text-shadow: 0 0 15px 2px rgba(255, 255, 255, 0.3);
-    }
-}
 
 /* Responsive */
 @media (max-width: 768px) {
