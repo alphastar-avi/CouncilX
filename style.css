@@ -1,0 +1,133 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header, main, footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.top-highlight {
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 10vw;
+    margin: 0;
+    font-weight: 600;
+    animation: glow 5s ease-in-out infinite;
+}
+
+h2 {
+    font-size: 3vw;
+    margin: 0;
+    font-weight: 400;
+    color: #aaa;
+}
+
+h3 {
+    font-size: 5vw;
+    margin: 0;
+    font-weight: 500;
+}
+
+.content {
+    margin-top: 50vh;
+}
+
+p {
+    font-size: 2.2vw;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.centered-text {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h4 {
+    font-size: 4vw;
+    margin: 0;
+    font-weight: 500;
+}
+
+.contact {
+    margin-top: 20px;
+    font-size: 1.2vw;
+    color: #aaa;
+}
+
+/* Animation styles */
+h1 span, h3 span {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+[data-animation="fade-in"].is-visible h1 span, 
+[data-animation="fade-in"].is-visible h3 span {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+[data-animation] {
+    opacity: 0;
+    transition: opacity 1s, transform 1s;
+}
+
+[data-animation="fade-in"] {
+    transform: translateY(20px);
+}
+
+[data-animation="fade-in"].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 15px 2px rgba(255, 255, 255, 0.3);
+    }
+    50% {
+        text-shadow: 0 0 40px 5px rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        text-shadow: 0 0 15px 2px rgba(255, 255, 255, 0.3);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 18vw;
+    }
+    h2 {
+        font-size: 5vw;
+    }
+    h3 {
+        font-size: 8vw;
+    }
+    p {
+        font-size: 4.2vw;
+    }
+    h4 {
+        font-size: 7vw;
+    }
+    .contact {
+        font-size: 2.5vw;
+    }
+}
